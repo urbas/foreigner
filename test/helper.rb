@@ -3,7 +3,7 @@ Bundler.require(:default)
 
 require 'test/unit'
 require 'active_record'
-require 'mocha'
+require 'mocha/setup'
 
 # Foreigner::Adapter.registered.values.each do |file_name|
 #   require file_name
