@@ -27,7 +27,7 @@ module Foreigner
             when 'r' then :restrict
           end
 
-          options[:on_update] = case row['dependency']
+          options[:on_update] = case row['update_action']
             when 'c' then :cascade
             when 'r' then :restrict
             when 'n' then :set_null
