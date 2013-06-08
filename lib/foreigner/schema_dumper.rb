@@ -21,6 +21,9 @@ module Foreigner
         if foreign_key.options[:dependent].present?
           statement_parts << (':dependent => ' + foreign_key.options[:dependent].inspect)
         end
+        if foreign_key.options[:on_update].present?
+          statement_parts << (':on_update => ' + foreign_key.options[:on_update].inspect)
+        end
 
         statement_parts.join(', ')
       end
